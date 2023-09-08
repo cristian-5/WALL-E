@@ -1,9 +1,10 @@
 
 ## WALL-E
 
-<img align="right" width="40" height="40" hgap="50" src="wall-e.png">
-
-🧮 **w**ebassembly **all**ocator, **handwritten** with 💗 in *assemblyscript*.
+<img align="left" width="40" height="40" hgap="10" src="wall-e.png">
+ 
+🧮 **w**ebassembly **all**ocator,\
+💗 **handwritten** with love in *assemblyscript*.
 
 ## Strategy:
 
