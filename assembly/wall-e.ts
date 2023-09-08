@@ -10,7 +10,7 @@
 //  +----------------+----------------+--------------------------------------+
 
 type ptr = u32;
-const nil: ptr = 0;
+export const nil: ptr = 0;
 
 let list: ptr = 0;
 let heap: ptr = 8;
