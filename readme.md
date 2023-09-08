@@ -10,16 +10,16 @@
 
 The strategy employs a straightforward bump allocation approach while
 efficiently managing freed blocks through a linked list encoded within each
-block's header.
+block's header.\
 For every allocated block, an 8-byte header is initially reserved to store
 both the logical and effective sizes. When a block is later freed, this
 header is repurposed to hold the effective pointer to the next free block
-and the effective size.
-The allocation strategy follows a "best-fit" paradigm, where the allocator
+and the effective size.\
+Fragmentation is minimized through a "best-fit" model, where the allocator
 seeks out the free block with the smallest size equal to or greater than
-the requested size, minimizing fragmentation. Notably, the effective size,
-which excludes the header size, represents the actual usable content size,
-while the logical size is the size originally requested by the user.
+the requested size but never exceeding 125% of the space request.
+The effective size, which excludes the header size, represents the actual
+usable content size, while the logical size is the size requested by the user.
 
 ```
 +-< effective pointer             +-< logical pointer
