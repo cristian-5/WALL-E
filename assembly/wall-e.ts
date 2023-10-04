@@ -1,6 +1,7 @@
 
 // INFO: asc assembly/wall-e.ts --outFile wall-e.wasm --optimize
 
+//  wall-e allocator, copyright (c) Cristian A.
 //  +-< effective pointer             +-< logical pointer
 //  !                                 !
 //  +----------------+----------------+--------------------------------------+
@@ -16,7 +17,7 @@ let list: ptr = 0;
 let heap: ptr = 8;
 
 /// finds the logical size of the block
-// pointed by the logical pointer p
+/// pointed by the logical pointer p
 export function size(p: ptr): u32 {
 	return load<u32>(p - 8);
 }
